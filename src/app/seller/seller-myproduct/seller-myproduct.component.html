@@ -1,0 +1,15 @@
+<div class="myproduct-container">
+  <div class="header">
+    <h2>My Products</h2>
+    <a routerLink="/sellerAddProduct" class="btn-add-product">Add Product</a>
+  </div>
+
+  <div class="product-list">
+    <div routerLink="/sellerProduct/{{ product.id }}" *ngFor="let product of products" class="product-card">
+      <img src="{{ product.image }}" alt="{{ product.name }}" class="product-image" />
+      <h3 class="product-name">{{ product.name }}</h3>
+      <p class="product-description">{{ product.description }}</p>
+      <p class="product-price">${{ product.price.toFixed(2) }}</p>
+    </div>
+  </div>
+</div>

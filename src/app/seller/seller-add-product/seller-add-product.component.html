@@ -1,0 +1,59 @@
+<div class="add-product-container">
+  <h2>Add New Product</h2>
+  <div class="popup" *ngIf="showPopup">
+  {{ popupMessage }}
+</div>
+  <form #addProductForm="ngForm" (ngSubmit)="addProduct(addProductForm)">
+    
+    <div class="form-group">
+      <label for="productName">Product Name</label>
+      <input
+        type="text"
+        id="productName"
+        name="names"
+        placeholder="Enter product name"
+        ngModel
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="productDescription">Description</label>
+      <textarea
+        id="productDescription"
+        name="description"
+        rows="4"
+        placeholder="Enter product description"
+        ngModel
+        required
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="productPrice">Price ($)</label>
+      <input
+        type="number"
+        id="productPrice"
+        name="price"
+        placeholder="Enter product price"
+        ngModel
+        required
+        min="0"
+        step="0.01"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="productImage">Image URL</label>
+      <input
+        type="url"
+        id="productImage"
+        name="image"
+        placeholder="Enter image URL"
+        ngModel
+      />
+    </div>
+
+    <button type="submit" [disabled]="addProductForm.invalid">Add Product</button>
+  </form>
+</div>
