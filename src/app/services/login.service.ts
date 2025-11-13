@@ -4,7 +4,7 @@ import { RouterModule, Router } from '@angular/router';
 import { BehaviorSubject, from } from 'rxjs';
 import { Observable } from 'rxjs';
 import { login, signUp } from '../data-type';
-import { LoginComponent } from '../login/login.component';
+import { LoginComponent } from '../seller/login/login.component';
 
 
 @Injectable({

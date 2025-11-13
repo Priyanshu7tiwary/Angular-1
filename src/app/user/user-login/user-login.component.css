@@ -1,0 +1,46 @@
+/* Overall container */
+.login-container {
+  width: 350px;
+  margin: 80px auto;
+  padding: 30px;
+  background: #e6f0ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 102, 255, 0.2);
+  border: 1px solid #3390ff;
+  text-align: center;
+}
+
+/* Heading */
+.login-container h2 {
+  color: #0056cc;
+  margin-bottom: 20px;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Labels */
+label {
+  display: block;
+  color: #0056cc;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Input fields */
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #3390ff;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #0056cc;
+  box-shadow: 0 0 5px rgba
+}

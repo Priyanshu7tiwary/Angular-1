@@ -5,11 +5,16 @@
   </div>
 
   <div class="product-list">
-    <div routerLink="/sellerProduct/{{ product.id }}" *ngFor="let product of products" class="product-card">
-      <img src="{{ product.image }}" alt="{{ product.name }}" class="product-image" />
-      <h3 class="product-name">{{ product.name }}</h3>
-      <p class="product-description">{{ product.description }}</p>
-      <p class="product-price">${{ product.price.toFixed(2) }}</p>
-    </div>
+    <a 
+  *ngFor="let product of products" 
+  class="product-card"
+  [routerLink]="['/sellerProductDetail', product.id]"
+>
+  <img src="{{ product.image }}" alt="{{ product.name }}" class="product-image" />
+  <h3 class="product-name">{{ product.name }}</h3>
+  <p class="product-description">{{ product.description }}</p>
+  <p class="product-price">${{ product.price.toFixed(2) }}</p>
+</a>
+
   </div>
 </div>

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="https://addverb.com/">ADDVERB</a>
+    <a class="navbar-brand" href="">ADDVERB</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,14 +9,11 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/sellerHome">SellerHome</a>
+        <li *ngIf="!(isLoggedIn$ | async)" class="nav-item">
+          <a class="nav-link" routerLink="/login">sellerLogin</a>
         </li>
         <li *ngIf="!(isLoggedIn$ | async)" class="nav-item">
-          <a class="nav-link" routerLink="/login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/cart">Cart</a>
+          <a class="nav-link" routerLink="/userLogin">userLogin</a>
         </li>
          <li *ngIf=" (isLoggedIn$ | async)" class="nav-item">
            <button class="btn btn-outline-light nav-link" (click)="onLogout()">Logout</button>
@@ -45,7 +42,7 @@
           <a class="nav-link" routerLink="/sellerMyproduct">My Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/orders">Orders</a>
+          <a class="nav-link" routerLink="/sellerOrder">Orders</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/accountSettings">Account Settings</a>
@@ -54,6 +51,29 @@
           <button class="btn btn-outline-light nav-link" (click)="onLogout()">Logout</button>
         </li>
       </ul>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngSwitchCase="'user'">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/userHome">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/userOrders">Orders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/accountSettings">Account Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cart">Cart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/userProducts">Products</a>
+        </li>
+        <li class="nav-item">
+          <div class="nav-link p-0">
+            <button class="btn btn-outline-primary card-btn" (click)="onLogout()">Logout</button>
+          </div>
+        </li>
+      </ul>
+
       <div class="d-flex align-items-center">
         <span class="navbar-text">
           {{ sellerName$ | async}}

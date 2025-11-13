@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
 import { CommonModule, NgIf } from '@angular/common';
 import { Observable } from 'rxjs';
+import { UserLoginService } from '../services/user-login.service';
 
 
 @Component({
@@ -19,17 +20,22 @@ export class NavbarComponent {
 
   isLoggedIn$: Observable<boolean>; // $ means it's an Observable
   sellerName$: Observable<string>;
-  constructor(private loginService: LoginService, private router: Router) {
+  constructor(private loginService: LoginService, private router: Router,private userloginService: UserLoginService) {
     this.isLoggedIn$ = loginService.isLoggedIn;
     this.sellerName$ = loginService.sellerName;
+
   }
   ngOnInit(): void {
     this.router.events.subscribe((val:any) => {
       console.warn(val);
-      if(localStorage.getItem('seller') && val.url.includes('seller'))
+      if(localStorage.getItem('seller')  &&val.url.includes('seller'))
         {console.log('sellerArea')
           this.menuType = 'seller';
         }
+      else if(localStorage.getItem('user')  &&val.url.includes('user'))
+        {console.log('userArea')
+          this.menuType = 'user';
+        }  
       else{
         console.log('not seller');
         this.menuType = 'default';
@@ -38,7 +44,7 @@ export class NavbarComponent {
   }
   
   onLogout(): void {
-    this.loginService.logout(); // Redirect to login page
+    this.userloginService.logout(); // Redirect to login page
   }
 
 }

@@ -45,41 +45,6 @@
   ],
   "products": [
     {
-      "id": "1",
-      "name": "Addverb Robot Arm",
-      "description": "Industrial robotic arm designed for precision automation and manufacturing.",
-      "price": 12000,
-      "image": "https://www.addverb.com/assets/robot-arm.jpg"
-    },
-    {
-      "id": "2",
-      "name": "Addverb AI Warehouse",
-      "description": "AI-powered warehouse management system for optimizing logistics and inventory.",
-      "price": 95000,
-      "image": "https://www.addverb.com/assets/warehouse-ai.jpg"
-    },
-    {
-      "id": "3",
-      "name": "Addverb Autonomous Mobile Robot",
-      "description": "Self-driving mobile robot for efficient transport inside warehouses and factories.",
-      "price": 25000,
-      "image": "https://www.addverb.com/assets/mobile-robot.jpg"
-    },
-    {
-      "id": "4",
-      "name": "Addverb Vision System",
-      "description": "Vision-based quality inspection system with machine learning capabilities.",
-      "price": 18000,
-      "image": "https://www.addverb.com/assets/vision-system.jpg"
-    },
-    {
-      "id": "nike1",
-      "name": "Nike Air Max 270",
-      "description": "Experience lightweight comfort with Nike Air Max cushioning.",
-      "price": 150,
-      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/21d5b4d8-3f5f-4d4a-93a5-0db1f72e265b/air-max-270-mens-shoe-KkLcGR.png"
-    },
-    {
       "id": "nike2",
       "name": "Nike React Infinity Run Flyknit",
       "description": "Designed to reduce injury and keep you running longer.",
@@ -99,48 +64,26 @@
       "description": "Classic high-top sneakers with vintage style.",
       "price": 100,
       "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/d231fc2b-7d18-4878-a0a2-d685a597fa73/blazer-mid-77-mens-shoe-s2Bqqj.png"
-    },
+    }
+  ],
+  "orders": [],
+  "userLogin": [
     {
-      "id": "2894",
-      "name": "aa",
-      "description": "aaa",
-      "price": 123,
-      "image": ""
-    },
+      "id": "27f9",
+      "email": "123",
+      "password": "123",
+      "confirm": "123"
+    }
+  ],
+  "cart": [
     {
-      "id": "be83",
-      "name": "aaa",
-      "description": "sdasda",
-      "price": 0,
-      "image": ""
-    },
-    {
-      "id": "8cee",
-      "name": "123",
-      "description": "123",
-      "price": 123,
-      "image": ""
-    },
-    {
-      "id": "2ab7",
-      "name": "1234",
-      "description": "1234",
-      "price": 1234,
-      "image": ""
-    },
-    {
-      "id": "8937",
-      "names": "test",
-      "description": "test",
-      "price": 123,
-      "image": ""
-    },
-    {
-      "id": "xumafti6mhuynige",
-      "names": "555",
-      "description": "5555",
-      "price": 555555,
-      "image": "0"
+      "userId": "123",
+      "items": {
+        "nike3": 21,
+        "nike4": 26,
+        "nike2": 23
+      },
+      "id": "a7a5"
     }
   ]
 }

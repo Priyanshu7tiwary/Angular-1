@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm, FormsModule} from '@angular/forms';
-import { LoginService } from '../services/login.service';
+import { LoginService } from '../../services/login.service';
 import { NgIf } from '@angular/common'; // adjust path if needed
 
 @Component({

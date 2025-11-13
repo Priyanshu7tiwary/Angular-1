@@ -1,0 +1,19 @@
+<div class="orders-container">
+  <h2>My Orders</h2>
+  <table class="orders-table">
+    <thead>
+      <tr>
+        <th>Order Number</th>
+        <th>Total Price ($)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <a routerLink="['/sellerOrderDetail', order.id]" *ngFor="let order of orders" class="order-link">
+      <tr >
+        <td>{{ order.id }}</td>
+        <td>{{ order.price }}</td>
+      </tr>
+      </a>
+    </tbody>
+  </table>
+</div>

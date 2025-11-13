@@ -1,0 +1,89 @@
+<div class="login-container">
+  <!-- LOGIN FORM -->
+  <div *ngIf="showLogin">
+    <h2>User Login</h2>
+    <form #login="ngForm" (ngSubmit)="onLogin(login)">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          ngModel
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          ngModel
+          required
+        />
+      </div>
+
+      <button type="submit">Login</button>
+
+      <!-- ✅ Toggle to Signup -->
+      <p>
+        Don't have an account?
+        <button type="button" (click)="toggleForm()">Sign Up</button>
+      </p>
+    </form>
+  </div>
+
+  <!-- SIGNUP FORM -->
+  <div *ngIf="!showLogin">
+    <h2>Sign Up</h2>
+    <form #signup="ngForm" (ngSubmit)="onSignup(signup)">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          ngModel
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Create a password"
+          ngModel
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="signup-confirm">Confirm Password</label>
+        <input
+          type="password"
+          id="signup-confirm"
+          name="confirm"
+          placeholder="Confirm password"
+          ngModel
+          required
+        />
+      </div>
+
+      <button type="submit">Sign Up</button>
+
+      <!-- ✅ Toggle to Login -->
+      <p>
+        Already have an account?
+        <button type="button" (click)="toggleForm()">Login</button>
+      </p>
+    </form>
+  </div>
+</div>

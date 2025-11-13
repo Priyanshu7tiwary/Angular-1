@@ -14,3 +14,14 @@ export interface Product{
     description:string,
     image:string
 }
+
+export interface Order{
+    id:string,
+    name:string,
+    items: Map<Product, number>,
+    price:number    
+}
+export interface Cart{
+    userId:string,
+    items: Map<string, number>;
+}

@@ -16,6 +16,9 @@ export class ProductService {
   getProducts(): Observable<Product[]>{
     return this.http.get<Product[]>('http://localhost:3000/products');
   }
+  getProduct(id:string): Observable<Product>{
+    return this.http.get<Product>('http://localhost:3000/products/'+id);
+  }
   postProduct(data:Product): Observable<Product>{
     data.id = this.generateRandomId();
     return this.http.post<Product>('http://localhost:3000/products',data);

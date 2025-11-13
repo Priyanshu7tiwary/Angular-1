@@ -1,1 +1,15 @@
-<p>seller-product-detail works!</p>
+<div class="add-product-container">
+  <h2>Add New Product</h2>
+  <div class="popup" *ngIf="showPopup">
+  {{ popupMessage }}
+</div>
+<div *ngIf="product" class="product-detail-card">
+  <img src="{{ product.image }}" alt="{{ product.name }}" class="product-image" />
+  <div class="product-info">
+    <h2 class="product-name">{{ product.name }}</h2>
+    <p class="product-description">{{ product.description }}</p>
+    <p class="product-price">${{ product.price.toFixed(2) }}</p>
+    <!-- Additional details or actions -->
+    <button (click)="sellerDelete(product.id)" class="btn-buy">Remove</button>
+  </div>
+</div>
